@@ -47,6 +47,7 @@
 
 .container-main-nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
  }
 
@@ -184,6 +185,11 @@ ul {
     letter-spacing: 0.06em;
 }
 
+.visual-hidden{
+    margin: 0;
+    padding: 0;
+}
+
 .section-title {
     margin-top: 0;
     margin-bottom: 50px;
@@ -245,7 +251,7 @@ ul {
 }
 
 
-.feature-list .item:nth-child(1)::before {
+/*.feature-list .item:nth-child(1)::before {
     content: "";
     display: block;
     height: 120px;
@@ -297,6 +303,33 @@ ul {
     border-radius: 4px;
 
     background-image: url("../images/astronaut.svg");
+}*/
+
+
+.icon-antenna {
+    display: inline-block;
+    background-position: center;
+    background-color: #F5F4FA;
+    
+}
+
+.icon-clock {
+    display: inline-block;
+    background-position: center;
+    background-color: #F5F4FA;
+    
+}
+
+.icon-diagram {
+    display: inline-block;
+    background-position: center;
+    background-color: #F5F4FA;
+}
+
+.icon-astronaut {
+    display: inline-block;
+    background-position: center;
+    background-color: #F5F4FA;
 }
 
 .title-definition {
@@ -352,6 +385,10 @@ ul {
 
 .team-list .item {
     width: 270px;
+    height: 422px;
+    background-color: var(--secondary-text-color);
+    background-color: #E5E5E5;
+    border: 1px solid #AFB1B8;
 }
 
 .team-list .item:not(:last-child) {
@@ -431,7 +468,24 @@ ul {
 
 .social-networks {
     display: flex;
+    --color3: #AFB1B8;
+    background-position: center;
 }
+
+
+.network-item:hover,
+.network-item:focus {
+    background-color: var(--accent-color);
+    fill: var(--secondary-text-color);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: 20px;
+    background-position: center;
+    cursor: pointer;
+}
+
 
 .clients-list {
     display: flex;
@@ -440,9 +494,23 @@ ul {
 }
 
 .clients-list .item {
+    height: 90px;
     width: 170px;
     justify-content: space-between;
+    fill: #AFB1B8;
+    background-position: center;
+    border: 1px solid #AFB1B8;
 
+}
+
+.icon-logo:hover,
+.icon-logo:focus {
+    color: var(--accent-color) ;
+}
+
+.clients-list .item:hover,
+.clients-list .item:focus {
+    border: 1px solid var(--accent-color);
 }
 
 .clients-list .item:not(:last-child) {
@@ -775,12 +843,11 @@ ul {
 .social-net-footer {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    width: auto:
 }
 
-/*.social-item:hover .link {
-    fill: var(--accent-color);
-}*/
+
+/*Способ через background-image если иконка не интерактивная*/
 
 /*.social-item:nth-child(1) {
     content: "";
@@ -797,62 +864,61 @@ ul {
 
 }*/
 
-
-.icon {
+.icon-insta {
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     background-size: 20px;
     background-position: center;
-    --color3: #ffffff;
-}
-
-.social-item:nth-child(2) {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    height: 44px;
-    width: 44px;
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.1);
-
-    background-image: url("../images/Twit.svg");
-
-}
-
-.social-item:nth-child(3) {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    height: 44px;
-    width: 44px;
-    background-size: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.1);
-
-    background-image: url("../images/Fb.svg");
-
-}
-
-.social-item:nth-child(4) {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    height: 44px;
-    width: 44px;
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.1);
+    --color3: var(--secondary-text-color);
     
-    background-image: url("../images/linkd.svg");
-
 }
 
+.icon-Twit {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-size: 20px;
+    background-position: center;
+    --color3: var(--secondary-text-color);
+}
+
+.icon-Fb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-size: 20px;
+    background-position: center;
+    --color3: var(--secondary-text-color);
+}
+
+.icon-linkd {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-position: center;
+    --color3: var(--secondary-text-color);
+}
+
+.social-item {
+    width: 44px;
+    height: 44px;
+    background-position: center;
+}
+
+.social-item:hover {
+    background-color: var(--accent-color);
+}
+
+.social-item .link {
+    background-position: center;
+    padding: 0;
+    border: none;
+}
 
 .social-item .link:not(:last-child) {
     margin-right: 10px;
@@ -879,7 +945,7 @@ ul {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.button-flight {
+/*.button-flight {
     display: inline-block;
     border-radius: 4px;
     padding: 10px 32px;
@@ -906,4 +972,22 @@ ul {
     background-size: contain;
     align-items: center;
     background-image: url("../images/icon\ send\ \(1\).svg");
+}*/
+
+.button-flight::after {
+    display: inline-block;
+    background-position: center;
+    padding: 0;
+    border: none;
+    width: 200px;
+    height: 50px;
+}
+
+.icon-send {
+    box-sizing: border-box;
+    border: none;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    --color3: var(--secondary-text-color);
 }

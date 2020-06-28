@@ -391,16 +391,33 @@ body {
 .work-list {
     display: flex;
     justify-content: space-between;
+    padding: 94px;
 }
 
 .work-list .item:not(:last-child) {
     margin-right: 30px;
 }
 
+.product-thumb {
+    position: relative;
+    display: flex;
+}
+
+.product-thumb .title {
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+   
+    justify-content: center;
+    text-align: center;
+}
+
 .work-list .title {
+    width: 370px;
     margin-top: 0;
     margin-bottom: 10px;
     padding-top: 30px;
+    background-color: rgba(47, 48, 58, 0.8);
 
     font-weight: 700;
     font-size: 14px;
@@ -816,7 +833,6 @@ body {
 
 .sign-line {
     display: flex;
-
 }
 
 .email-input {
@@ -848,10 +864,11 @@ body {
     align-items: center;
     width: 200px;
     height: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
     background-color: var(--accent-color);
     color: var(--secondary-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -860,13 +877,21 @@ body {
     outline: none;
     text-decoration: none;
 
+    position: relative;
+
 }
 
 .email-send .icon {
+    position: absolute;
+    right: 10%;
+    align-items: center;
+    justify-content: center;
+
     width: 24px;
     height: 24px;
     margin-left: 10px;
     fill: var(--secondary-text-color);
+    font-weight: bold;
 }
 
 .copy {
@@ -1020,10 +1045,11 @@ body {
 }
 
 .flex-element-card {
+    opacity: 1;
     background-color: var(--secondary-text-color);
     padding-bottom: 20px;
     border-radius: 0px 0px 4px 4px;
-    transition: tranform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     cursor: pointer;
